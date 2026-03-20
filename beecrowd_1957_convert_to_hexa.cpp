@@ -6,6 +6,8 @@
 int main(){
 	
 	int num,rest;
+	int i = 0;
+	char saida[20] = "";
 	
 	scanf("%d", &num);
 	
@@ -15,19 +17,36 @@ int main(){
 		num = num / 16;
 		
 		if (rest < 10){
+
+
+			rest = rest + '0';
 			
-			printf("%d\n", rest);
 		}
 		
 		else{
-				
-			printf("%c\n", 55 + rest);
-		}
+			
+			rest = rest + 55;
+	}
+	
+	
+	saida[i] = rest;
+    i++;
 		
+	}
+	saida[i] = '\0';
+	
+	for(int k = i - 1; k >= 0; k--){
+		
+		
+		printf("%c", saida[k]);
+	
 	}
 	
 	
 	return 0;
 }
+
+
+
 
 
